@@ -23,5 +23,5 @@ returns the name of the active kubernetes context
 Variables
 ---------
 
-* rbw_k8s_context: 1 if is a repository, 0 instead
+* rbw_k8s_context: contains the name of the kubernetes cluster used
 
