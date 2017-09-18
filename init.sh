@@ -17,5 +17,6 @@ rbw_load_theme() {
         "hacker")  source ${RBW_PATH}/themes/hacker/init.sh     ;;
         "video")  source ${RBW_PATH}/themes/video/init.sh     ;;
         "mayday")  source ${RBW_PATH}/themes/mayday/init.sh     ;;
+        "devops")  source ${RBW_PATH}/themes/devops/init.sh     ;;
     esac
 }
