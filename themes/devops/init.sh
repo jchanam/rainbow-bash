@@ -34,7 +34,7 @@ get_k8s_info(){
 RBW_THEME="\
 ┌\[$RBW_R_BLUE\][\$(get_k8s_info)] \
 \[$RBW_RESET_ALL\]\w \
-\[\$(get_git_color)\][ \$(get_git_info)] \
+\[\$(get_git_color)\] \$(get_git_info) \
 \[$RBW_R_RED\]\[\033[\$((COLUMNS-10))G\] [\t]
 \[$RBW_RESET_ALL\]└\$ "
 
