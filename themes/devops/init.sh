@@ -2,6 +2,7 @@
 # Imports
 source ${RBW_PLUGINS}/git/init.sh
 source ${RBW_PLUGINS}/kubernetes/init.sh
+source ${RBW_PLUGINS}/system/init.sh
 
 # This is a hack for the colors. Colors need to be between \[\],
 # if you return from "get_git_info" \[$RBW_BR_RED\]$rbw_git_branch  then
@@ -31,8 +32,17 @@ get_k8s_info(){
   echo -en "$rbw_k8s_context"
 }
 
+get_exit_status(){
+    if [[ $rbw_system_exit_wrong == 1 ]]; then
+        echo -en "${RBW_R_RED}"
+    else
+        echo -en "${RBW_R_GREEN}"
+    fi
+}
+
 RBW_THEME="\
-┌\[$RBW_R_BLUE\][\$(get_k8s_info)] \
+┌\[\$(get_exit_status)\] \
+\[$RBW_R_BLUE\][\$(get_k8s_info)] \
 \[$RBW_RESET_ALL\]\w \
 \[\$(get_git_color)\]\$(get_git_info) \
 \[$RBW_R_RED\]\[\033[\$((COLUMNS-10))G\] [\t]

@@ -11,4 +11,5 @@ plugins used:
 
 * [Git](/plugins/git)
 * [Kubernetes](/plugins/kubernetes)
+* [System](/plugins/system)
 
